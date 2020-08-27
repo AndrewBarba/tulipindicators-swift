@@ -1,22 +1,29 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.2
+
 import PackageDescription
 
 let package = Package(
-    name: "tulipindicators",
+    name: "TulipIndicators",
+    platforms: [
+        .iOS(.v12),
+        .macOS(.v10_15),
+        .tvOS(.v12)
+    ],
     products: [
         .library(
-            name: "tulipindicators",
-            targets: ["tulipindicators"]),
+            name: "TulipIndicators",
+            targets: ["TulipIndicators"]),
     ],
     targets: [
         .target(
-            name: "tulipindicators",
+            name: "TulipIndicators",
             dependencies: ["libindicators"]),
         .target(
             name: "libindicators",
             dependencies: []),
         .testTarget(
-            name: "tulipindicatorsTests",
-            dependencies: ["tulipindicators"]),
-    ]
+            name: "TulipIndicatorsTests",
+            dependencies: ["TulipIndicators"]),
+    ],
+    swiftLanguageVersions: [.v5]
 )
