@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import tulipindicators
+@testable import TulipIndicators
 
 final class FunctionTests: XCTestCase {
 
